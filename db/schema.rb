@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613100717) do
+ActiveRecord::Schema.define(version: 20170614085604) do
+
+  create_table "hotels", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "website"
+    t.integer  "landline"
+    t.integer  "mobile"
+    t.integer  "fax"
+    t.text     "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
